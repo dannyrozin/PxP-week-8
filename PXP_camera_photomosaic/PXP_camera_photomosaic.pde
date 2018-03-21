@@ -1,4 +1,4 @@
-// The world pixel by pixel 2016
+// The world pixel by pixel 2018
 // Daniel Rozin
 // creating a photo mosaic with "frames" of live video
 // click mouse to take new snapshot
