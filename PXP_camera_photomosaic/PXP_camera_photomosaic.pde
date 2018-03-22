@@ -5,16 +5,16 @@
 import processing.video.*;
 
 Capture ourVideo;                                          // variable to hold the video
-int numOfCells= 40;                                        // this means 40 across and 40 down 1600 total
-int cellX, cellY;                                          // this will hold the size of each little cell
+int numOfCells= 60;                                        // this means 40 across and 40 down 1600 total
+int cellWidth, cellHeight;                                          // this will hold the size of each little cell
 Cell [] cells = new Cell[0];                               // an array of our objects Cell
 void setup() {
   size(1280, 720);
   frameRate(120);
   ourVideo = new Capture(this, width, height);           // open default video in the size of window
   ourVideo.start();                                       // start the video
-  cellX = width/ numOfCells;
-  cellY = height/ numOfCells;
+  cellWidth = width/ numOfCells;
+  cellHeight = height/ numOfCells;
   cells= (Cell[]) append(cells, new Cell() );            // one cell to start with
 }
 
@@ -22,8 +22,8 @@ void draw() {
   if (ourVideo.available())  ourVideo.read();           // get a fresh frame of video as often as we can
   background (0);
   ourVideo.loadPixels();                               // load the pixels array of the video 
-  for (int x = 0; x<width; x+= cellX) {                // visit every cell 
-    for (int y = 0; y<height; y+= cellY) {
+  for (int x = 0; x<width; x+= cellWidth) {                // visit every cell 
+    for (int y = 0; y<height; y+= cellHeight) {
       PxPGetPixel(x, y, ourVideo.pixels, width);        // get the RGB of that point
       float recordSimilarity = 100000;                  // this variable will hold the best similarity
       int mostSimilarCell=0;                            // this variable will hold the number of the cell with the best similarity
@@ -44,12 +44,12 @@ class Cell {                            // class to hold a cell
   int cellR, cellG, cellB;              // variables to hold the average RGB of the cell
   PImage cellImage;                     // variable to hold the pic of the cell
   Cell() {                                         // constructor, this will be caled when we call new()
-    cellImage= createImage(cellX, cellY, ARGB);        // create an empty smalll pimage
-    cellImage.copy(ourVideo, 0, 0, width, height, 0, 0, cellX, cellY);  // copy the curent video into the pic
+    cellImage= createImage(cellWidth, cellHeight, ARGB);        // create an empty smalll pimage
+    cellImage.copy(ourVideo, 0, 0, width, height, 0, 0, cellWidth, cellHeight);  // copy the curent video into the pic
     cellImage.loadPixels();
-    int sumR=0, sumG= 0, sumB= 0, divider = cellX*cellY;
-    for (int x = 0; x<cellX; x++) {                     // calculate the average RGB
-      for (int y = 0; y<cellY; y++) {
+    int sumR=0, sumG= 0, sumB= 0, divider = cellWidth*cellHeight;
+    for (int x = 0; x<cellWidth; x++) {                     // calculate the average RGB
+      for (int y = 0; y<cellHeight; y++) {
         PxPGetPixel(x, y, cellImage.pixels, cellImage.width);
         sumR+= R;
         sumG+= G;
