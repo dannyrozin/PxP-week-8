@@ -18,8 +18,8 @@ void setup() {
   image(ourImage, 0, 0);                          // the image of the cats is emmidiately drawn to the screen and we will never access it again
 }
 
-void draw() {              // move on, nothing here
-}
+void draw() {}              // move on, nothing here
+
 
 void mouseDragged() {                               // for a painting operation the mouseDragged is the best place to put your code
   loadPixels();
@@ -28,8 +28,7 @@ void mouseDragged() {                               // for a painting operation 
 
   for (int x = mouseX-radius; x< mouseX+radius; x++) {           // visit all 50 pixels around the mouse
     for (int y = mouseY-radius; y< mouseY+radius; y++) {
-      if (
-        x>0 && x<width && y>0 && y<height                           // check that we are in the bounds of the window
+      if ( x>0 && x<width && y>0 && y<height                           // check that we are in the bounds of the window
         &&  dist (mouseX, mouseY, x, y )< radius) {                  // check that we are inside a bounding circle
         PxPGetPixel(x, y, ourImage2.pixels, width);                 // get the RGB of our pixel in the image of dogs
         float imageR = R *  transparancy;                          // mutiply the dogs values with the transparancy

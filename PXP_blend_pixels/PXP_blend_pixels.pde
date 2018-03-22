@@ -1,6 +1,6 @@
 // The world pixel by pixel 2018
 // Daniel Rozin
-// blending two images pixel by pixel
+// blending two images Camera and image)pixel by pixel
 
 import processing.video.*;
 
@@ -42,6 +42,7 @@ void draw() {
     }
   }
   updatePixels();
+  println(frameRate);
 }
 
 
