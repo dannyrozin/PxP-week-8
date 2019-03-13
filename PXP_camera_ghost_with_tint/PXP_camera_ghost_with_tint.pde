@@ -1,4 +1,4 @@
-// The world pixel by pixel 2018
+// The world pixel by pixel 2019
 // Daniel Rozin
 // copying live video with transparancy to create ghosting effect usint tint()
 

@@ -1,4 +1,4 @@
-// The world pixel by pixel 2018
+// The world pixel by pixel 2019
 // Daniel Rozin
 // buffering video frames
 
@@ -11,7 +11,7 @@ PImage videoFrames[]= new PImage[numOfFrames];        // this will store all our
 int currentFrame=0;
 void setup() {
   size(1280, 720);
-  frameRate(120);
+  frameRate(30);
   ourVideo = new Capture(this, width, height);       // open default video in the size of window
   ourVideo.start();                                  // start the video
   for (int i = 0; i < numOfFrames; i++) {

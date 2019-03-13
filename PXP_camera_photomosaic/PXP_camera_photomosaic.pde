@@ -1,11 +1,11 @@
-// The world pixel by pixel 2018
+// The world pixel by pixel 2019
 // Daniel Rozin
 // creating a photo mosaic with "frames" of live video
 // click mouse to take new snapshot
 import processing.video.*;
 
 Capture ourVideo;                                          // variable to hold the video
-int numOfCells= 60;                                        // this means 40 across and 40 down 1600 total
+int numOfCells= 40;                                        // this means 40 across and 40 down 1600 total
 int cellWidth, cellHeight;                                          // this will hold the size of each little cell
 Cell [] cells = new Cell[0];                               // an array of our objects Cell
 void setup() {

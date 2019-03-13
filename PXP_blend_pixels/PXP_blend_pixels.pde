@@ -1,4 +1,4 @@
-// The world pixel by pixel 2018
+// The world pixel by pixel 2019
 // Daniel Rozin
 // blending two images Camera and image)pixel by pixel
 
