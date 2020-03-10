@@ -1,6 +1,6 @@
-// The world pixel by pixel 2019
+// The world pixel by pixel 2020
 // Daniel Rozin
-// blending two images Camera and image)pixel by pixel
+// blending two images (Camera and image)pixel by pixel
 
 import processing.video.*;
 
