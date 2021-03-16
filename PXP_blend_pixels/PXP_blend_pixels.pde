@@ -1,4 +1,4 @@
-// The world pixel by pixel 2020
+// The world pixel by pixel 2021
 // Daniel Rozin
 // blending two images (Camera and image)pixel by pixel
 

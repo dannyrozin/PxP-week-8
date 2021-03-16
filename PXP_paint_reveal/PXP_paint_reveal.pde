@@ -1,4 +1,4 @@
-// The world pixel by pixel 2020
+// The world pixel by pixel 2021
 // Daniel Rozin
 // reveal effect with two images
 
@@ -11,7 +11,7 @@ void setup() {
   ourImage= loadImage("http://cdn.playbuzz.com/cdn/f721db4c-bdcf-4cbf-83e0-57f9d352b1ed/4330b72d-02e1-4947-b241-9bb4bf06a539.jpg");
   ourImage.resize(width, height);
 
-  ourImage2= loadImage("http://www.kars4kids.org/blog/wp-content/uploads/2015/02/dogs.jpg");
+  ourImage2= loadImage("https://www.pbs.org/wgbh/nova/media/original_images/dog-tales-img.jpg");
   ourImage2.resize(width, height);
   ourImage2.loadPixels();                          // the image of the dogs will be revealed so we need to access its pixels
 

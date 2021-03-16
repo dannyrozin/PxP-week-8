@@ -1,4 +1,4 @@
-// The world pixel by pixel 2020
+// The world pixel by pixel 2021
 // Daniel Rozin
 // creating a photo mosaic with "frames" of live video
 // click mouse to take new snapshot
@@ -34,7 +34,7 @@ void draw() {
           mostSimilarCell= thisCell;
         }
       }
-      image ( cells[mostSimilarCell].cellImage, x, y);       // draw the most similar cell to the screen
+       cells[mostSimilarCell].display(x, y);       // draw the most similar cell to the screen
     }
   }                                    
   image (ourVideo, 0, 0, 200, 100);                       // SHOW THE LIVE VIDEO IN THE CORNER
@@ -63,6 +63,10 @@ class Cell {                            // class to hold a cell
 
   float getSimilarity(int r, int g, int b) {            // caculate the similarity between the cell's RGB and the current ount RGB
     return dist (cellR, r, cellG, g, cellB, b);
+  }
+  
+  void display(int x, int y){
+    image ( cellImage, x, y); 
   }
 }
 
