@@ -1,4 +1,4 @@
-// The world pixel by pixel 2021
+// The world pixel by pixel 2022
 // Daniel Rozin
 // use 2 cameras
 
@@ -13,7 +13,7 @@ void setup() {
   ourVideo = new Capture(this, width, height, cameras[0]);
   ourVideo.start();    
   //ourVideo2 = new Capture(this, width, height, "Logitech Camera");       // open second video in the size of window
-  ourVideo2 = new Capture(this, width, height, cameras[14]);
+  ourVideo2 = new Capture(this, width, height, cameras[1]);
   ourVideo2.start();
 }
 

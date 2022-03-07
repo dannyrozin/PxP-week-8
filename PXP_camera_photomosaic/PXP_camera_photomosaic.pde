@@ -1,4 +1,4 @@
-// The world pixel by pixel 2021
+// The world pixel by pixel 2022
 // Daniel Rozin
 // creating a photo mosaic with "frames" of live video
 // click mouse to take new snapshot
