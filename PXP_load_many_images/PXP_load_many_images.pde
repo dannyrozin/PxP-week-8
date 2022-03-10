@@ -21,7 +21,11 @@ void draw() {
     //image  (imageArray[i], i*imageWidth, 0, imageWidth, height);
     copy(imageArray[i], i*imageWidth, 0, imageWidth, height, i*imageWidth, 0, imageWidth, height);
   }
-  // for sequential flipping try the following
-  // tint(255, 15);
-  //image(imageArray[ second() % numOfImages  ], 0, 0);
+  //for sequential flipping try the following (gesture to Ukraine)
+  /*
+  tint(0, 95, 186, 25);
+  image(imageArray[ second() % numOfImages  ], 0, 0, width, height/2);
+  tint(255, 210, 36, 25);
+  image(imageArray[ (second()+1) % numOfImages  ], 0, height/2, width, height/2);
+  */
 }
